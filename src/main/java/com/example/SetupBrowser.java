@@ -9,47 +9,49 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 
-import java.util.concurrent.TimeUnit;
-
 public class SetupBrowser {
-    public static WebDriver driver;
+    public static WebDriver chromeDriver;
+    public static WebDriver firefoxDriver;
+
     public static JavascriptExecutor js;
     public static Helper helper;
-    public static ObjectRepository_Chrome obj;
 
-    @BeforeClass
-    public static void createDriver() {
-        // Chọn trình duyệt muốn sử dụng ở đây (Chrome hoặc Firefox)
-        String browser = "chrome"; // hoặc "chrome"
-
-        if (browser.equalsIgnoreCase("chrome")) {
-            // Cấu hình cho Chrome
-            WebDriverManager.chromedriver().setup();
-            driver = new ChromeDriver();
-            System.out.println("Started Chrome Driver");
-        } else if (browser.equalsIgnoreCase("firefox")) {
-            // Cấu hình cho Firefox
+    // Setup Firefox cho DoH
+    public static void setupFirefox() {
+        if (firefoxDriver == null) {
             WebDriverManager.firefoxdriver().setup();
             FirefoxOptions options = new FirefoxOptions();
-            // Bật DoH (DNS over HTTPS) nếu muốn, chỉ cần bỏ chú thích dòng dưới
             options.addPreference("network.trr.mode", 2);
             options.addPreference("network.trr.uri", "https://dns.cloudflare.com/dns-query");
-            driver = new FirefoxDriver(options);
-            System.out.println("Started Firefox Driver");
-        } else {
-            throw new IllegalArgumentException("Unsupported browser: " + browser);
+            firefoxDriver = new FirefoxDriver(options);
+            firefoxDriver.manage().window().maximize();
+            helper = new Helper(firefoxDriver);
+            js = (JavascriptExecutor) firefoxDriver;
+            System.out.println("Đã khởi động Firefox với DoH");
         }
-
-        // Cấu hình chung cho trình duyệt
-        driver.manage().window().maximize(); // Mở cửa sổ trình duyệt ở chế độ toàn màn hình
-        js = (JavascriptExecutor) driver;
-        helper = new Helper(driver);
-        obj = new ObjectRepository_Chrome();
     }
 
-    //    @AfterClass
-//    public void closeDriver(){
-//        driver.quit();
-//        System.out.println("Closed driver");
-//    }
+    // Setup Chrome cho non-DoH
+    public static void setupChrome() {
+        if (chromeDriver == null) {
+            WebDriverManager.chromedriver().setup();
+            chromeDriver = new ChromeDriver();
+            chromeDriver.manage().window().maximize();
+            helper = new Helper(chromeDriver);
+            js = (JavascriptExecutor) chromeDriver;
+            System.out.println("Đã khởi động Chrome (non-DoH)");
+        }
+    }
+
+    @AfterClass
+    public static void tearDown() {
+        if (firefoxDriver != null) {
+            firefoxDriver.quit();
+            System.out.println("Đã đóng Firefox");
+        }
+        if (chromeDriver != null) {
+            chromeDriver.quit();
+            System.out.println("Đã đóng Chrome");
+        }
+    }
 }
