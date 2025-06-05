@@ -36,8 +36,9 @@
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
-            <version>5.7.0</version> <!-- hoặc phiên bản mới nhất -->
+            <version>5.8.0</version> <!-- hoặc phiên bản mới nhất -->
         </dependency>
+
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>

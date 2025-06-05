@@ -1,0 +1,31 @@
+[10480:6504:0520/200938.925:INFO:components\enterprise\browser\controller\chrome_browser_cloud_management_controller.cc:202] No machine level policy manager exists.
+[22948:24808:0520/200939.026:VERBOSE1:components\viz\service\main\viz_main_impl.cc:85] VizNullHypothesis is disabled (not a warning)
+[6852:136:0520/200939.163:INFO:third_party\webrtc\system_wrappers\source\cpu_info.cc:56] Available number of cores: 8
+[7160:18176:0520/200939.760:INFO:third_party\webrtc\system_wrappers\source\cpu_info.cc:56] Available number of cores: 8
+[26856:26812:0520/200939.902:INFO:third_party\webrtc\system_wrappers\source\cpu_info.cc:56] Available number of cores: 8
+[21212:2316:0520/200940.381:INFO:third_party\webrtc\system_wrappers\source\cpu_info.cc:56] Available number of cores: 8
+[10480:6504:0520/200940.647:INFO:CONSOLE:0] "Refused to load the script 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCuebBICxH3FZeML7_xQVszyKm_sswAcac&libraries=places' because it violates the following Content Security Policy directive: "script-src 'self' 'sha256-qcMXZ/ErgDG9p2Htysz9era6iflv8JXya41zOY0slSc=' 'sha256-ydM8qJ+T0Nd7adK8t34/cs0GvvCG0JBujCWzV3uML8E=' 'sha256-TzTXRDJBcbY1qVQheGb/4iSGqKPqCg6XVoerYf5BYMY=' embed.cloudflarestream.com". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback.
+", source: https://one.one.one.one/help/ (0)
+[10480:6504:0520/200940.751:INFO:CONSOLE:1] "Sm9pbiB1cyBhbmQgaGVscCBidWlsZCBhIGJldHRlciBJbnRlcm5ldCBodHRwczovL2Nsb3VkZmxhcmUuY29tL2NhcmVlcnM/dXRtPTEuMS4xLjEtRE5T", source: https://one.one.one.one/help-aa686e0e9e4d122550f8.js (1)
+[25000:14868:0520/200940.754:INFO:third_party\webrtc\system_wrappers\source\cpu_info.cc:56] Available number of cores: 8
+[10480:6504:0520/200940.927:INFO:CONSOLE:1] "Refused to connect to 'https://platform.dash.cloudflare.com/sentry/envelope' because it violates the following Content Security Policy directive: "connect-src 'self' 1.1.1.1 1.0.0.1 *.cloudflare-dns.com *.help.every1dns.net".
+", source: https://embed.cloudflarestream.com/embed/r4xu.fla9.latest.js (1)
+[10480:6504:0520/200940.927:INFO:CONSOLE:1] "Fetch API cannot load https://platform.dash.cloudflare.com/sentry/envelope. Refused to connect because it violates the document's Content Security Policy.", source: https://embed.cloudflarestream.com/embed/r4xu.fla9.latest.js (1)
+[10480:6504:0520/200940.939:INFO:CONSOLE:1] "TypeError: Failed to fetch", source: https://embed.cloudflarestream.com/embed/r4xu.fla9.latest.js (1)
+[25560:17976:0520/200941.004:INFO:third_party\webrtc\system_wrappers\source\cpu_info.cc:56] Available number of cores: 8
+[10480:6504:0520/200941.660:INFO:CONSOLE:271] "EmeEncryptionSchemePolyfill: Waiting to detect encryptionScheme support.", source: https://embed.cloudflarestream.com/embed/iframe-player.5876f574.js (271)
+[10480:6504:0520/200941.660:INFO:CONSOLE:271] "McEncryptionSchemePolyfill: Waiting to detect encryptionScheme support.", source: https://embed.cloudflarestream.com/embed/iframe-player.5876f574.js (271)
+[10480:6504:0520/200941.716:INFO:CONSOLE:271] "EmeEncryptionSchemePolyfill: Waiting to detect encryptionScheme support.", source: https://embed.cloudflarestream.com/embed/iframe-player.5876f574.js (271)
+[10480:6504:0520/200941.716:INFO:CONSOLE:271] "McEncryptionSchemePolyfill: Waiting to detect encryptionScheme support.", source: https://embed.cloudflarestream.com/embed/iframe-player.5876f574.js (271)
+[10480:6504:0520/200947.737:INFO:CONSOLE:1] "Refused to connect to 'https://platform.dash.cloudflare.com/sentry/envelope' because it violates the following Content Security Policy directive: "connect-src 'self' 1.1.1.1 1.0.0.1 *.cloudflare-dns.com *.help.every1dns.net".
+", source: https://embed.cloudflarestream.com/embed/r4xu.fla9.latest.js (1)
+[10480:6504:0520/200947.737:INFO:CONSOLE:1] "Fetch API cannot load https://platform.dash.cloudflare.com/sentry/envelope. Refused to connect because it violates the document's Content Security Policy.", source: https://embed.cloudflarestream.com/embed/r4xu.fla9.latest.js (1)
+[10480:6504:0520/200947.737:INFO:CONSOLE:1] "TypeError: Failed to fetch", source: https://embed.cloudflarestream.com/embed/r4xu.fla9.latest.js (1)
+[10480:6504:0520/201049.214:INFO:CONSOLE:1] "Refused to connect to 'https://platform.dash.cloudflare.com/sentry/envelope' because it violates the following Content Security Policy directive: "connect-src 'self' 1.1.1.1 1.0.0.1 *.cloudflare-dns.com *.help.every1dns.net".
+", source: https://embed.cloudflarestream.com/embed/r4xu.fla9.latest.js (1)
+[10480:6504:0520/201049.214:INFO:CONSOLE:1] "Fetch API cannot load https://platform.dash.cloudflare.com/sentry/envelope. Refused to connect because it violates the document's Content Security Policy.", source: https://embed.cloudflarestream.com/embed/r4xu.fla9.latest.js (1)
+[10480:6504:0520/201049.214:INFO:CONSOLE:1] "TypeError: Failed to fetch", source: https://embed.cloudflarestream.com/embed/r4xu.fla9.latest.js (1)
+[10480:6504:0520/201112.851:INFO:CONSOLE:1] "Refused to connect to 'https://platform.dash.cloudflare.com/sentry/envelope' because it violates the following Content Security Policy directive: "connect-src 'self' 1.1.1.1 1.0.0.1 *.cloudflare-dns.com *.help.every1dns.net".
+", source: https://embed.cloudflarestream.com/embed/r4xu.fla9.latest.js (1)
+[10480:6504:0520/201112.851:INFO:CONSOLE:1] "Fetch API cannot load https://platform.dash.cloudflare.com/sentry/envelope. Refused to connect because it violates the document's Content Security Policy.", source: https://embed.cloudflarestream.com/embed/r4xu.fla9.latest.js (1)
+[10480:6504:0520/201112.851:INFO:CONSOLE:1] "TypeError: Failed to fetch", source: https://embed.cloudflarestream.com/embed/r4xu.fla9.latest.js (1)
