@@ -1,5 +1,4 @@
 package com.example;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -31,7 +30,7 @@ public class TsharkCapture {
         builder.redirectErrorStream(true);
         process = builder.start();
 
-        // ❗ Ghi log tshark ở luồng riêng (không block chương trình)
+        // Ghi log tshark ở luồng riêng (không block chương trình)
         new Thread(() -> {
             try (BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()))) {
                 String line;
@@ -148,6 +147,26 @@ public class TsharkCapture {
             subFolder = "quad9";
         } else if (filename.toLowerCase().contains("adguard")) {
             subFolder = "adguard";
+        } else if (filename.toLowerCase().contains("cleanbrowsing_family")) {
+            subFolder = "cleanbrowsing_family";
+        } else if (filename.toLowerCase().contains("opendns")) {
+            subFolder = "opendns";
+        } else if (filename.toLowerCase().contains("lirbredns")) {
+            subFolder = "lirbredns";
+        } else if (filename.toLowerCase().contains("yandex")) {
+            subFolder = "yandex";
+        } else if (filename.toLowerCase().contains("uncensoreddns")) {
+            subFolder = "uncensoreddns";
+        } else if (filename.toLowerCase().contains("mullvad")) {
+            subFolder = "mullvad";
+        } else if (filename.toLowerCase().contains("dnssb")) {
+            subFolder = "dnssb";
+        } else if (filename.toLowerCase().contains("alidns")) {
+            subFolder = "alidns";
+        } else if (filename.toLowerCase().contains("dnswatch")) {
+            subFolder = "dnswatch";
+        } else if (filename.toLowerCase().contains("dnshome")) {
+            subFolder = "dnshome";
         } else {
             subFolder = "other";
         }

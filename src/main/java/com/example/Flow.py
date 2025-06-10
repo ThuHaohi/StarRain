@@ -6,13 +6,28 @@ import os
 
 doh_servers = {
     "1.1.1.1",
+    "1.0.0.1",
     "8.8.8.8",
+    "8.8.4.4.",
     "9.9.9.9",
-    # ... thêm IP server DoH bạn có
+    "146.112.41.2",
+    "94.140.14.14",
+    "94.140.15.15",
+    "77.88.8.88",
+    "77.88.8.2",
+    "185.222.222.222",
+    "185.228.168.168",
+    "185.228.169.168",
+    "116.202.176.26",
+    "223.5.5.5",
+    "223.6.6.6",
+    "45.86.125.58",
+    "45.86.125.59",
+    "194.242.2.2"
 }
 
 # Load PCAP
-pcap_path = r'D:\haro\IT_project\StarRainGit\StarRain\src\main\resources\tshark\output\chrome_doh.pcap'
+pcap_path = r'/Users/vinbrain/Desktop/IT_Project/StarRain/src/main/resources/tshark/output/cloudflare/cloudflare.pcap'
 cap = pyshark.FileCapture(pcap_path, only_summaries=False)
 
 
@@ -145,7 +160,7 @@ def extract_features(flow_key, packets):
     }
 
     # Gán label: nếu IP server (địa chỉ IP thứ 2 trong key) nằm trong doh_servers
-    if flow_key[4] == 'TCP' and flow_key[3] == '443':
+    if flow_key[4] == 'TCP' and flow_key[3] == '443' and flow_key[2] in doh_servers:
         features['Label'] = 1
     else:
         features['Label'] = 0
